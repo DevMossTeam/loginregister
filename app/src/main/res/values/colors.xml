@@ -11,4 +11,5 @@
     <color name="google_bg">#9D7FD0</color>
     <color name="facebook_bg">#899BC0</color>
     <color name="twiter_bg">#3DC3FB</color>
+    <color name="bgcolor">#FF0300</color>
 </resources>

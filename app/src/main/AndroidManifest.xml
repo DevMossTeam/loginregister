@@ -12,21 +12,32 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BizzHub"
         tools:targetApi="31">
+
+        <!-- Aktivitas untuk welcome_page (halaman awal) -->
         <activity
-            android:name=".register_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".loginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name=".welcomeactivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Aktivitas untuk MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- Aktivitas untuk register_Activity -->
+        <activity
+            android:name=".register_Activity"
+            android:exported="false" />
+
+        <!-- Aktivitas untuk loginActivity -->
+        <activity
+            android:name=".loginActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
