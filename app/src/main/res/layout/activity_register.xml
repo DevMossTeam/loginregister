@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg"
+    tools:context=".register_Activity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:text="Daftar"
+        android:textColor="@color/white"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="616dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/button"
+        android:text="Daftar"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="16dp"
+        android:text="Sudah Punya Akun?"
+        app:layout_constraintStart_toStartOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
+    <TextView
+        android:id="@+id/btn_masuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="16dp"
+        android:text="Masuk"
+        android:textColor="@color/link"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
+    <View
+        android:id="@+id/line1_login"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <View
+        android:id="@+id/line2_login"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/btn_register"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Atau daftar dengan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+
+    <LinearLayout
+        android:id="@+id/sosmed_google_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/line2_login"
+        app:layout_constraintStart_toStartOf="@+id/line1_login"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_google"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/img_facebook"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_twitter"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/edt_fullname_register"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/rounded_edt"
+                android:drawableLeft="@drawable/ic_personadd"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Nama Lengkap"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_edt"
+                android:drawableLeft="@drawable/ic_person"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Nama Pengguna"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_fullname_register"
+                app:layout_constraintStart_toStartOf="@+id/edt_fullname_register"
+                app:layout_constraintTop_toBottomOf="@+id/edt_fullname_register" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_edt"
+                android:drawableLeft="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_name"
+                app:layout_constraintStart_toStartOf="@+id/edt_name"
+                app:layout_constraintTop_toBottomOf="@+id/edt_name" />
+
+            <EditText
+                android:id="@+id/datePicker"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_edt"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_date"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Tanggal Lahir"
+                android:inputType="none"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_email"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edt_email"
+                app:layout_constraintTop_toBottomOf="@+id/edt_email" />
+
+            <Spinner
+                android:id="@+id/gender"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_edt"
+                app:layout_constraintEnd_toEndOf="@+id/datePicker"
+                app:layout_constraintStart_toStartOf="@+id/datePicker"
+                app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+            <EditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_edt"
+                android:drawableLeft="@drawable/ic_pone"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Nomer Telepon"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/gender"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/gender"
+                app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+            <EditText
+                android:id="@+id/edt_alamat_register"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_edt"
+                android:drawableLeft="@drawable/ic_address"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Alamat"
+                android:inputType="textMultiLine"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextNumber"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextNumber"
+                app:layout_constraintTop_toBottomOf="@+id/editTextNumber"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/edt_password_register"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_edt"
+                android:drawableLeft="@drawable/ic_password"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_alamat_register"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edt_alamat_register"
+                app:layout_constraintTop_toBottomOf="@+id/edt_alamat_register"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <EditText
+                android:id="@+id/edt_konfirmpassword_register"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/rounded_edt"
+                android:drawableLeft="@drawable/ic_password2"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Konfirmasi password anda"
+                android:inputType="textPassword"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/edt_password_register"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edt_password_register"
+                app:layout_constraintTop_toBottomOf="@+id/edt_password_register"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

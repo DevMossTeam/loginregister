@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".loginActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_name_login"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="164dp"
+        android:background="@drawable/rounded_edt"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/ic_person"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/edt_password_login"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded_edt"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:drawablePadding="10dp"
+        android:paddingLeft="10dp"
+        android:drawableLeft="@drawable/ic_password"
+        app:layout_constraintEnd_toEndOf="@+id/edt_name_login"
+        app:layout_constraintStart_toStartOf="@+id/edt_name_login"
+        app:layout_constraintTop_toBottomOf="@+id/edt_name_login" />
+
+    <TextView
+        android:id="@+id/txv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Lupa Password?"
+        android:textColor="@color/link"
+        app:layout_constraintEnd_toEndOf="@+id/edt_password_login"
+        app:layout_constraintTop_toBottomOf="@+id/edt_password_login" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@color/button"
+        android:text="Masuk"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_password_login"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/edt_password_login"
+        app:layout_constraintTop_toBottomOf="@+id/txv_forgot_password" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="24dp"
+        android:text="Belum Punya Account?"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <TextView
+        android:id="@+id/btn_masuk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="24dp"
+        android:text="Daftar"
+        android:textColor="@color/link"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <View
+        android:id="@+id/line1_login"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/grey"
+        app:layout_constraintStart_toStartOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <View
+        android:id="@+id/line2_login"
+        android:layout_width="100dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="48dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+
+        android:gravity="center"
+        android:text="Atau login dengan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <LinearLayout
+        android:id="@+id/sosmed_google_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/line2_login"
+        app:layout_constraintStart_toStartOf="@+id/line1_login"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_google"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/img_facebook"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/img_twitter"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
