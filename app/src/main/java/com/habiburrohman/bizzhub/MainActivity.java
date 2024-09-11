@@ -67,11 +67,6 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         ToastShow("On Stop");
     }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ToastShow("On Destroy");
-    }
     public void ToastShow(String message){
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
