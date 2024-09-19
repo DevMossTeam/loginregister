@@ -1,8 +1,31 @@
 <resources>
+    <!-- Nama aplikasi -->
     <string name="app_name">BizzHub</string>
+
+    <!-- Array untuk pilihan gender -->
     <string-array name="gender_array">
         <item>Pilih Gender</item>
         <item>Laki-laki</item>
         <item>Perempuan</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <!-- Array untuk kode region negara (telepon internasional) -->
+    <string-array name="region_codes">
+        <item>+62 Indonesia</item>
+        <item>+1 USA</item>
+        <item>+44 UK</item>
+        <item>+91 India</item>
+        <item>+81 Japan</item>
+        <item>+86 China</item>
+        <item>+61 Australia</item>
+        <item>+49 Germany</item>
+        <item>+33 France</item>
+        <item>+7 Russia</item>
+        <item>+34 Spain</item>
+        <item>+39 Italy</item>
+        <item>+55 Brazil</item>
+        <item>+27 South Africa</item>
+        <!-- Tambahkan negara lain sesuai kebutuhan -->
     </string-array>
 </resources>

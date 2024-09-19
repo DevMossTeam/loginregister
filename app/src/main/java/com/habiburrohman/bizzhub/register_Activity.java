@@ -19,6 +19,7 @@ import com.google.android.material.button.MaterialButton;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import com.habiburrohman.bizzhub.LoginActivity;
 
 public class register_Activity extends AppCompatActivity {
 
@@ -46,7 +47,7 @@ public class register_Activity extends AppCompatActivity {
         btn_masuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(register_Activity.this, loginActivity.class);
+                Intent intent = new Intent(register_Activity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
@@ -88,7 +89,7 @@ public class register_Activity extends AppCompatActivity {
                 Toast.makeText(register_Activity.this, "Tolong isikan semua data!", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(register_Activity.this, "Register Berhasil!", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(register_Activity.this, loginActivity.class);
+                Intent intent = new Intent(register_Activity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
