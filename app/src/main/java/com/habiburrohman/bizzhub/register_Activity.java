@@ -20,8 +20,13 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 import com.habiburrohman.bizzhub.LoginActivity;
+import com.habiburrohman.bizzhub.database.RegisterDBHelper;
+import com.habiburrohman.bizzhub.model.Person;
 
 public class register_Activity extends AppCompatActivity {
+
+    RegisterDBHelper dbHelper =new RegisterDBHelper(this);
+
 
     private EditText datePickerEditText;
     private EditText fullname, name, email, phone, alamat, password, konfirmpassword;
@@ -72,7 +77,7 @@ public class register_Activity extends AppCompatActivity {
         btnRegister.setOnClickListener(v -> {
             String fullName = fullname.getText().toString();
             String Nama = name.getText().toString();
-            String TglLahir = datePickerEditText.getText().toString();  // Ambil data dari datePickerEditText
+            String TglLahir = datePickerEditText.getText().toString();
             String Phone = phone.getText().toString();
             String Alamat = alamat.getText().toString();
             String Email = email.getText().toString();
@@ -80,20 +85,30 @@ public class register_Activity extends AppCompatActivity {
             String konfPassword = konfirmpassword.getText().toString();
             String selectedGender = spiner_gender.getSelectedItem().toString();
 
-            if(!Password.equals(konfPassword)) {
+            // Validasi password
+            if (!Password.equals(konfPassword)) {
                 Toast.makeText(register_Activity.this, "Password tidak sama", Toast.LENGTH_SHORT).show();
                 return;
             }
 
+            // Cek apakah semua field sudah diisi
             if (fullName.isEmpty() || Email.isEmpty() || Password.isEmpty() || Nama.isEmpty() || TglLahir.isEmpty() || selectedGender.isEmpty() || Phone.isEmpty() || Alamat.isEmpty()) {
                 Toast.makeText(register_Activity.this, "Tolong isikan semua data!", Toast.LENGTH_SHORT).show();
             } else {
+                // Membuat objek Person dengan data yang diinputkan
+                Person person = new Person(fullName, Nama, Email, TglLahir, selectedGender, Phone, Alamat, Password);
+
+                // Menyimpan data ke SQLite
+                dbHelper.addPerson(person);
                 Toast.makeText(register_Activity.this, "Register Berhasil!", Toast.LENGTH_SHORT).show();
+
+                // Navigasi ke halaman Login
                 Intent intent = new Intent(register_Activity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
+
         datePickerEditText.setOnClickListener(v -> showDatePickerDialog());
     }
     private void showDatePickerDialog() {

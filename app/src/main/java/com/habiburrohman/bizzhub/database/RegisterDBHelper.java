@@ -50,6 +50,7 @@ public class RegisterDBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_PERSON);
         onCreate(db);
     }
+
     public void addPerson(Person person){
         SQLiteDatabase db = this.getWritableDatabase();
         db.beginTransaction();
@@ -63,12 +64,20 @@ public class RegisterDBHelper extends SQLiteOpenHelper {
             values.put(COLUMN_NOHP, person.getNohp());
             values.put(COLUMN_ALAMAT, person.getAlamat());
             values.put(COLUMN_PASSWORD, person.getPassword());
-            db.setTransactionSuccessful();
-        }catch (Exception e){
-            Log.d("Register Activity",e.getMessage());
-        }finally {
+
+            // Insert data into the table
+            long result = db.insert(TABLE_PERSON, null, values);
+            if (result != -1) {
+                db.setTransactionSuccessful(); // Mark transaction as successful if insert is successful
+            } else {
+                Log.d("RegisterDBHelper", "Failed to insert person data");
+            }
+        } catch (Exception e) {
+            Log.d("Register Activity", e.getMessage());
+        } finally {
             db.endTransaction();
         }
     }
+
 
 }
